@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>OSU eMapR Lab | Data Vis</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="cache-control" content="no-cache">
+		<link rel="shortcut icon" href="http://emapr.ceoas.oregonstate.edu/resources/images/favicon.ico" type="image/x-icon">
+	        <link rel="icon" href="http://emapr.ceoas.oregonstate.edu/resources/images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="./libs/Leaflet.draw/./libs/Leaflet.draw/resources/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="./libs/Leaflet.draw/./libs/Leaflet.draw/resources/images/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<!-- W3.CSS -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+		<!--<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>-->
+		<script src="./node_modules/leaflet/dist/leaflet.js"></script>
+		<!-- jQuery> -->
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+		<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+		<!-- Plotly.js -->
+		<!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+		<script src="./node_modules/plotly.js-dist/plotly.js"></script>
+		<!-- Leaflet plugins> -->
+		<script src="./js/L.Map.Sync.js"></script> <!-- https://github.com/jieter/Leaflet.Sync -->
+		<script src="./js/leaflet-side-by-side.min.js"></script> <!--https://github.com/digidem/leaflet-side-by-side -->
+		
+          	<!--<link rel="stylesheet" href="./libs/Leaflet.draw/src/leaflet.draw.css" />
+		<script src="./libs/Leaflet.draw/src/Leaflet.draw.js"></script>
+		<script src="./libs/Leaflet.draw/src/Leaflet.Draw.Event.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/Edit.Poly.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/Edit.SimpleShape.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/Edit.Rectangle.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/Edit.Marker.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/Edit.CircleMarker.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/Edit.Circle.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.Feature.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.Polyline.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.Polygon.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.SimpleShape.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.Rectangle.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.Circle.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.Marker.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/handler/Draw.CircleMarker.js"></script>
+		<script src="./libs/Leaflet.draw/src/ext/TouchEvents.js"></script>
+		<script src="./libs/Leaflet.draw/src/ext/LatLngUtil.js"></script>
+		<script src="./libs/Leaflet.draw/src/ext/GeometryUtil.js"></script>
+		<script src="./libs/Leaflet.draw/src/ext/LineUtil.Intersect.js"></script>
+		<script src="./libs/Leaflet.draw/src/ext/Polyline.Intersect.js"></script>
+		<script src="./libs/Leaflet.draw/src/ext/Polygon.Intersect.js"></script>
+		<script src="./libs/Leaflet.draw/src/Control.Draw.js"></script>
+		<script src="./libs/Leaflet.draw/src/Tooltip.js"></script>
+		<script src="./libs/Leaflet.draw/src/Toolbar.js"></script>
+		<script src="./libs/Leaflet.draw/src/draw/DrawToolbar.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/EditToolbar.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/EditToolbar.Edit.js"></script>
+		<script src="./libs/Leaflet.draw/src/edit/handler/EditToolbar.Delete.js"></script>-->
+
+		<!-- style sheets -->
+		<link rel="stylesheet" href="./css/styleRange.css" />
+		<link rel="stylesheet" href="./css/styleMain.css" />
+
+
+		<!--include the defualt ARD grid overlay-->
+		<script src="./vector/conus_ard_grid_epsg4326.js"></script>
+		<!--lat log  control-->
+		<link rel="stylesheet" href="./css/L.Control.MousePosition.css">
+		<script src="./js/L.Control.MousePosition.js"></script>
+
+
+		<!-- html overlays -->
+		<link rel="stylesheet" href="./css/overlay.css">
+		<script src="./js/credits.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-99603309-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+
+
+	</head>
+	<body>
+		<div id="container">
+			<!--This block is what places the overlays and attached text. the style in each line below are the coordinates for each text block.-->
+			<!--Guide Overlay-->
+			<div class="overlay" id="mapGuide" onclick="off()">
+				<div class="labels" style="top: 25px;  left: 345px"><i class="left"></i> Current data year displayed</div>
+				<div class="labels" style="top: 80px;  left: 255px"><i class="left"></i> Adjust data transparency</div>
+				<div class="labels" style="top: 121px; left: 255px"><i class="left"></i> Application guide</div>
+				<div class="labels" style="top: 151px; left: 255px"><i class="left"></i> Site credits and references</div>
+				<div class="labels" style="top: 181px; left: 255px"><i class="left"></i> View data legend</div>
+				<div class="labels" style="top: 269px; left: 268px"> These buttons drop menus that allow overlay selection and provide options for viewing data</div>
+				<div class="labels" style="bottom: 25px;left: 50%"> <strong>Click anywhere to exit</strong>  </div>
+				<div class="vl" ></div> <!--this vertical white line -->
+				<div class="hl" style="left: 210px;top: 280px; width: 55px"></div> <!--This is the horizontal white line-->
+				<div id="guideTxt">
+					<h5 class='bold'>About</h5>
+					<p>This is a land cover change visualization and data download tool. Visualize change by making selections from the menu panel on the left. The following instructions serve as a brief guide to its operation.</p>
+					<h5 class='bold'>Recommended Browsers</h5>
+					<p>In order: Chrome, Opera, Firefox
+					<h5 class='bold'>Select layers</h5>
+					<p class='bold'>Base layers</p>
+						<p>Pressing the "Select Base Layer" button on the menu panel reveals a set of map base layers that provide context, including place names, 
+						   roads, topography, and aerial imagery. One layer is visible at time and 
+						   selected by activating the radio button corresponding to the desired layer. These layers are made visible by reducing the opacity of the
+						   overlying data layer using the vertical slider position at the upper left corner of the map.</p>
+					<p class='bold'>Data layers</p>
+						<p>Pressing the "Select Data Layer" button on the menu panel reveals a set of map data layers describing attributes of land cover. One layer is visible at time and 
+						   selected by activating the radio button corresponding to the desired layer. The opacity of these layers can be reduced to show underlying base layers using the 
+						   vertical slider position at the upper left corner of the map. A question mark icon <i class="fa fa-question-circle"></i> to the right of each layer can be clicked to load a page with metadata.</p>
+					<p class='bold'>Download Tile</p>
+						<p>Pressing the "Select Download Tile" button on the menu panel reveals a set of vector overlays to help with selecting regions for download. Double click in the map display to select a tile for download, and click once on a selected tile to remove that tile from your download list. Once a tile is selected the region will become opacity, and the download button under "Select Download Tile" will display the number of tiles selected. Pressing the download button will open a download form where all that is needed is an email address and your choice of datatype(s). Note that while the feature callout option is active, time series plotting by left mouse click is disabled.</p>
+					<h5 class='bold'>Map Interaction</h5>
+					<p class='bold'>Zoom</p>
+						<p>You can zoom in and out by using the mouse wheel or zoom to a box size by pressing the shift key then clicking and dragging on the map.</p>
+					<p class='bold'>Pan</p>
+						<p>You can pan around the map by holding left mouse click and dragging.</p>
+					<p class='bold'>Time Series</p>
+						<p>You can view a time series plot of the data displayed on the map by left clicking on a location of interest. The time series is an annual interval. Hovering on
+						a time series line will display data value and year at each observation. Note that while the feature callout option is active (described above), time series 
+						plotting is disabled. The first time that you plot a time series, you might be waking up the drives, which will delay drawing the plot, subsequent requests for
+						plotting will be near-immediate.</p>
+					<h5 class='bold'>Viewing options</h5>
+					<p>The default data view is the most current year of data for biomass. At any time you can display the data legend by clicking on the legend icon at the bottom of the 
+					button group along the upper left side of the map - the legend toggles on and off with a left mouse click on the legend button.  Time series plotting with left mouse click works with all views.<p>
+					<p class='bold'>View Single Year</p>
+						<p>Pressing the "View Single Year" button activates a single map view of selected data (the default view). A horizontal slider allows you to change the data year displayed.</p>  
+					<p class='bold'>Compare Years | Flicker</p>
+						<p>Pressing the "Compare Years | Flicker" button activates a single map view of selected data that will flicker between two years of data for easy identification of change. 
+						Two horizontal sliders allows you to change the data years displayed. Press the "Start Flicker" button to begin flickering the data years, press it again to stop. At any 
+						you can change either year slider, which will automatically stop the flickering. You can also change data layer opacity as well as base and data type at any time - flickering 
+						will not stop. Change the flicker speed using the "Flicker Speed" slider - units are milliseconds.</p> 
+					<p class='bold'>Compare Years | Split</p>
+						<p>Pressing the "Compare Years | Split" button activates a side-by-side map view of selected data that shows the top slider year data on the left and the bottom slider year
+						data on the right. The map zoom and pan are synced, as is the cursor - the main cursor is an arrow while the synced cursor is a red circle.</p> 
+					<p class='bold'>Compare Years | Swipe</p>
+						<p>Pressing the "Compare Years | Swipe" button activates a side-by-side map view of selected data that shows the top slider year data on the left and the bottom slider year
+						data on the right. Left click and drag the map swipe handle side-to-side to alter the year overlays.</p> 	
+
+
+				</div>
+
+			</div>
+
+			<!--Credits Overlay-->
+			<div class="overlay" id="mapCredits" onclick="off()">
+				<div id="creditContainer">
+					<h2 style="color: white;">Credits<i id="mapCreditsExit" class="fa fa-times-circle w3-right pointer" style=""></i></h2>
+					
+				</div>
+			</div>
+
+			<!-- this the end of the overlay stuff--------------------------------------------------------------------------------------------------->
+
+			<div id="left" class="card-4" style="">
+				<h5 class="sectionDivider"><strong>Select Layers</strong></h5>
+				<div id="selectBaseBtn" class="sectionButton layerButton pointer"><p><strong>Select Base Layer</strong></p></div>
+				<div id="baseSelectContainer" class="w3-hide layerContainer inset">
+					<div id="baseList" class="listContainer">
+						<div><input class="radio-input baseList" type="radio" value="Imagery"><label class="radio-label"> Imagery</label></div>
+						<div><input class="radio-input baseList" type="radio" value="Terrain"><label class="radio-label"> Terrain</label></div>
+						<div><input class="radio-input baseList" type="radio" value="Street" checked><label class="radio-label"> Street</label></div>
+					</div>
+				</div>
+
+				<div id="selectDataBtn" class="sectionButton layerButton pointer"><p><strong>Select Data Layer</strong></p></div>
+				<div id="dataSelectContainer" class="w3-hide layerContainer inset">
+					<!-- dataset are added on page ready with jquery -->
+				</div>
+
+				<div id="selectOverlayBtn" class="sectionButton layerButton pointer"><strong><p>Select Download Tile</p></strong></div>
+				<div id="overlaySelectContainer" class="w3-hide layerContainer inset">
+					<div id="overlayList" class="listContainer">
+						<div><input id="ardGrid" class="radio-input overlayList" type="hidden" value="ard" data-waschecked="false"><label> USGS ARD Grid</label></div>
+						<div id="download" class="pointer w3-container w3-block w3-grey w3-center w3-round" style="margin-bottom: .7em; margin-top: .7em;">Select Tile(s)</div>
+						<!-- dataset are added on page ready with jquery -->
+					</div>
+				</div>
+
+				<h5 class="sectionDivider"><strong>Viewing Options</strong></h5>
+				<div id="singleView" class="sectionButton activityButton pointer"><p><strong>View Single Year</strong></p></div>
+				<div id="singleYearContainer" class="w3-hide sectionContainer inset">
+					<div class="listContainer">
+						<div class="singleYear">
+							<!-- year sliders are added on page ready with jquery -->
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="sectionButton activityButton pointer"><p><strong>Compare Years | Flicker</strong></p></div>
+				<div id="flickerContainer" class="w3-hide sectionContainer inset">
+					<!-- year sliders are added on page ready with jquery -->
+					<div class="listContainer">
+						<div class="multiYear">
+	
+						</div>
+						<div class="slidecontainer">
+							<input id="flickerSpeed" type="range" min="100" max="1000" step="10" value="300" class="slider" style="direction: rtl;">
+							<p class='sliderLabel'>Flicker Speed (ms): <span>300</span></p>
+						</div>
+						<div id="flicker" class="pointer w3-container w3-block w3-green w3-center w3-round" style="margin-bottom:10px;">Start Flicker</div>
+					</div>
+				</div>
+				
+				
+				<div class="sectionButton activityButton pointer"><p><strong>Compare Years | Split</strong></p></div>
+				<div id="splitContainer" class="w3-hide sectionContainer inset">
+					<div class="listContainer">
+						<div class="multiYear">
+							<!-- year sliders are added on page ready with jquery -->
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="sectionButton activityButton pointer"><p><strong>Compare Years | Swipe</strong></p></div>
+				<div id="swipeContainer" class="w3-hide sectionContainer inset">
+					<div class="listContainer">
+						<div class="multiYear">
+							<!-- year sliders are added on page ready with jquery -->
+						</div>
+					</div>
+				</div>
+				
+				<!--<h5 style='margin: 0px; padding: 10px 0px 10px 16px; border-top: 1px solid grey; border-bottom: 1px solid grey;'><strong>Download Data</strong></h5>-->
+				
+				<!--<button class="w3-button w3-block w3-left-align w3-border w3-light-gray w3-card-2 w3-opacity-min w3-hover-opacity-off sectionButton">Reduce Area</button>	
+					<div id="reduceContainer" class="w3-hide w3-margin sectionContainer">	  
+					
+					</div>
+					
+					
+					
+					<button class="w3-button w3-block w3-left-align w3-border w3-light-gray w3-card-2 w3-opacity-min w3-hover-opacity-off sectionButton">Plot Multi-points</button>	
+					<div id="multiPointContainer" class="w3-hide w3-margin sectionContainer">	  
+						<p>Use draw tool to add points</p>
+					</div>
+					
+					
+					<button class="w3-button w3-block w3-left-align w3-border w3-light-gray w3-card-2 w3-opacity-min w3-hover-opacity-off sectionButton">Get Data</button>	
+					<div id="getDataContainer" class="w3-hide w3-margin sectionContainer"> 
+					
+					</div> -->
+				<a href="http://emapr.ceoas.oregonstate.edu/"><img id="logo" src="http://emapr.ceoas.oregonstate.edu/resources/images/graphic_logo_text.svg"></a>
+        <a href="http://oregonstate.edu/"><img id="osulogo" src="http://emapr.ceoas.oregonstate.edu/resources/images/osu.svg"></a>
+			</div>
+			<div id="right">
+				<div id="map" class="show absolute"></div>
+				<div id="flickerMap" class="hide absolute"></div>
+				<div id="map1" class="hide relative"></div>
+				<div id="map2" class="hide relative"></div>
+				<div id="map3" class="hide absolute"></div>
+				<div id="plot" class="w3-card-4" style="display: none;">
+          <div id="latlong"  style="padding-left: 1em; color:gray; font-size:11 !important;"></div>
+					<img id="hidePlot" class="pointer" src="./imgs/cancel.svg" style="height:20px; width:auto; position:absolute; right:3px; top:3px; border-radius:10px;">
+					<div id="spinner"><i class="fa fa-spinner fa-spin" style="font-size:20px; color:#498AF3;"></i></div>
+					
+				</div>
+				<!--<div id="download" class="tooltip"><img class="pointer" src="./imgs/download.svg"><span class="tooltiptext">Download data</span></div>-->
+				<input id="alphaSlider" type="range" min="0" max="1" step="0.001" value="1">
+				<!--<img id="download" class="pointer" title="Get Data" src="./imgs/download.svg">-->
+				<img id="guide" class="pointer blink" title="Map Guide" src="./imgs/guide.svg">
+				<img id="credits" class="pointer" title="Credits" src="./imgs/credits.svg">
+				<img id="legendControl" class="pointer" title="Data Legend" src="./imgs/legend.svg">
+				<div id="legendHolder">
+					<img id="legend" src="./imgs/biomass.svg">
+				</div>
+				<div id="leftYear" class="yearLabel">2012</div>
+				<div id="rightYear" class="yearLabel"></div>
+				<!--<div class="slideVcontainer">
+					
+				</div>-->
+			</div>
+		</div>
+		
+		<!-- The Modal -->
+		<div id="downloadModal" class="w3-modal" style='z-index:200000'>
+		  <div class="w3-modal-content">
+			<div class="w3-container">
+			  <h4 style="margin-bottom:0px;">Data Download Form</h4>
+			  <p style="margin-top:0px; margin-bottom: 6px; font-size:14px;">Data is available as tiles defined by the USGS ARD grid. A list of these grid tiles can be seen under "Region Selected". Please select the desired datatype(s) and enter your email address to receive data. Requested data can be accessed through download links shortly after submitting the request. Data will be available for one week.</p>
+			  <span id="out" onclick="document.getElementById('downloadModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+			  	<div class="w3-row w3-margin-bottom">
+					<div class="w3-row-padding w3-half w3-border" style="height:200px; padding-right:8px;">
+						<h4 style="margin-bottom:5px">Select data</h4>
+						<div id="dataListDL" style="margin: 0px 16px; height: 10em;overflow-y: auto">
+								<!-- dataset are added on page ready with jquery -->
+						</div>
+					</div>
+					<div class="w3-row-padding w3-half w3-border" style="height:200px; padding-left:8px;">
+						<h4 style="margin-bottom:5px">Region Selected</h4>
+
+						<div class="w3-row w3-margin-bottom">
+							<div class="w3-half">
+								<div id="regionListDL"  style="margin: 0px 16px;">
+
+								</div>
+							</div>
+							<!--<div class="w3-half">-->
+								<!--<label>Column (h)</label>-->
+								<!--<select id='ardCol'class="w3-select" name="ardCol">-->
+								  <!--<option value="" disabled selected>Choose Column (h)</option>-->
+								<!--</select>-->
+								<!--<label>Row (v)</label>-->
+								<!--<select id='ardRow'class="w3-select" name="ardRow">-->
+								  <!--<option value="" disabled selected>Choose Row (v)</option>-->
+								<!--</select>-->
+
+							<!--</div>-->
+						</div>
+					</div>
+				</div>
+				<div class="w3-row ">
+					<div class="w3-half">
+						<input id="email" class="w3-input w3-border" type="text" placeholder="Email Address (so we can send links to requested data)" autocomplete="off" style="height:40px;">
+					</div>
+					<div class="w3-half">
+						<button id="dataSubmit" class="w3-button w3-blue w3-block" style="height:40px;">Submit</button>
+					</div>
+				</div>
+				<div class="w3-row">
+					<!--<h4 style="margin-top:5px; margin-bottom:0px;">Message</h4>-->
+					<div id="message" style="margin-bottom:5px;"></div>
+				</div>
+				
+				
+			</div>
+		  </div>
+		</div>
+		<script src="./js/LTData.js"></script>
+		<script src="./js/overlay.js"></script>
+		<script src="./js/jsMain.js"></script>
+		<script src="./js/dataRequest.js"></script>
+		<script src="./js/plotting.js"></script>
+	</body>
+</html>

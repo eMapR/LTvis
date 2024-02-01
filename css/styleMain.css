@@ -1,0 +1,436 @@
+body {
+  min-width:1200px;
+  margin: 0;
+  padding: 0;
+}
+
+body, table, tr, td, th, div, h1, h2, input {
+  font-family: calibri, sans-serif;
+  /*font-size: 11pt;*/
+}
+
+li{
+	margin: 0em 0em;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  height: 100%;
+}
+
+#left {
+  flex: 0 0 200px; /* do not grow, do not shrink, start at 200px */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1000;
+}
+
+#right {
+  flex: 1; /* grow */;
+}
+
+#map, #flickerMap, #map3 {
+  width: 100%;
+  height: 100%;
+}
+
+.ctl {
+  padding: 2px 10px 2px 10px;
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: right;
+}
+
+.title {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.src {
+  font-size: 10pt;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#logo {
+  position: absolute;
+  height: 33px;
+  width: auto;
+  left: 8px;
+  bottom: 10px;
+  z-index: 100;
+}
+
+#osulogo {
+  position: absolute;
+  height: 31px;
+  width: auto;
+  left: 96px;
+  bottom: 12px;
+  z-index: 100;
+}
+
+#map1, #map2 {
+  height: 100%;
+  width: 49.8%;
+}
+
+#map1 {
+  float: left;
+}
+
+#map2 {
+  float: right;
+}
+
+/* Change cursor when over entire map */
+.leaflet-container {
+  cursor: default !important;
+}
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.show.absolute{
+  /*position: relative !important;*/
+  position: absolute !important;
+}
+
+.show.relative{
+  /*position: relative !important;*/
+  position: relative !important;
+}
+
+
+#plot {
+  position: absolute;
+  bottom: 15px !important;
+  left: 200px;
+  right: 0px;
+  margin: 0 auto;
+  height: 13.5em;
+  width: 810px;
+  z-index: 2000;
+  background-color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cat {
+  z-index: 1;
+}
+
+button:focus {
+  outline: 0;
+}
+
+
+.leaflet-sbs-range {
+   pointer-events: none;
+}
+
+.stopColor{
+	color: #fff;
+	background-color: #D62851;
+}
+
+
+/* ##################### ICONS ##################### */
+#download {
+  cursor: not-allowed;
+}
+
+#download:hover {
+	opacity: 1;
+}
+
+#listy{
+	overflow-y: auto;
+	height: 9em;
+	width: 16em;
+}
+
+
+#guide{
+	position: absolute;
+	top: 120px;
+	left: 218px;
+	height:25px;
+	border-radius: 25px;
+	z-index: 10000;
+	opacity: 0.87;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#guide:hover {
+	opacity: 1;
+}
+
+#credits{
+	position: absolute;
+	top: 150px;
+	left: 218px;
+	height:25px;
+	border-radius: 25px;
+	z-index: 10000;
+	opacity: 0.87;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#credits:hover {
+	opacity: 1;
+}
+
+#legendControl{
+	position: absolute;
+	top: 180px;
+	left: 218px;
+	height:25px;
+	border-radius: 25px;
+	z-index: 10000;
+	opacity: 0.87;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#legendControl:hover {
+	opacity: 1;
+}
+
+#legendHolder{
+	position: absolute;
+	top: 210px;
+	left: 218px;
+	z-index: 10000;
+	display:none;
+}
+
+
+
+
+/* ##################### YEAR LABELS ##################### */
+.yearLabel{
+	position: absolute;
+	border-radius: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 30px;
+	background-color: white;
+	opacity: 0.87;
+	z-index: 10000;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#leftYear{
+	top: 13px;
+	left: 255px;
+}
+
+#rightYear{
+	display: none;
+	top: 13px;
+	right: 55px;
+}
+
+
+/* ##################### LEAFLET SCALE BAR ##################### */
+.leaflet-control-scale-line{
+	border: 2px solid black;
+	border-top: none;
+	background: rgba(255, 255, 255, 0.87);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.leaflet-control-scale-line:not(:first-child){
+	border-top: 2px solid black;
+}
+
+
+#spinner{
+	display:none; 
+	position:absolute; 
+	left:3px; 
+	top:3px
+}
+
+#clickMap, #clickTile{
+	position: absolute;
+	text-align: center;
+	padding: 100px;
+	top: 200px !important;
+	left: 200px;
+	right: 0px;
+	margin: 0 auto;
+	height: 105px;
+	width: 300px;
+	background-color: rgba(255, 255, 255, 0.87);
+	border-radius: 8px;
+	padding: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index:10000
+}
+
+
+
+
+
+/* ##################### LEFT PANEL BUTTONS AND CONTAINERS ##################### */
+.sectionButton{
+	opacity: 0.75;
+	border-top: 0.5px solid rgba(0,0,0,0.15);
+	border-bottom: 0.5px solid rgba(0,0,0,0.15);
+	background-color: #e6e6e6;
+}
+
+.sectionButton:hover{
+	opacity: 1;
+	background-color: #E0E0E0;
+}
+
+.sectionButton p{
+	margin:0px;
+	padding: 5px 5px 5px 16px;
+	opacity: 1;
+}
+
+.dataCover{
+	opacity: 0.75;
+	border-top: 0.5px solid rgba(0,0,0,0.15);
+	/*border-bottom: 0.5px solid rgba(0,0,0,0.15);*/
+	/*background-color: #f5f5f5;*/
+}
+
+.dataCover:hover{
+	opacity: 1;
+
+}
+
+.dataCover p{
+	margin:0px;
+	padding: 5px 5px 5px 10px;
+	opacity: 1;
+}
+
+
+
+
+.radio-input {
+	width: 14px;
+	height: 14px;
+	vertical-align: top;
+	margin-top:4px;
+	cursor: pointer;
+}
+
+.radio-label {
+	vertical-align: top;
+}
+
+.listContainer {
+	padding: 8px;
+}
+
+.datalistContainer{
+	padding: 8px;
+	padding-top: 0em;
+	padding-left: 2em;
+}
+
+.inset{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16) inset, 0 2px 10px 0 rgba(0,0,0,0.12) inset;
+}
+
+.sectionDivider{
+	background-color: #F8F8F8; 
+	margin: 0px; 
+	padding: 5px 0px 5px 6px; 
+	border-top: 0.5px solid rgba(0,0,0,0.15); 
+	border-bottom: 0.5px solid rgba(0,0,0,0.15);
+	background-color: #D3D3D3;
+	cursor: default;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.blink {
+  animation: blink 0.75s step-start 4s 12;
+	-moz-animation: blink 0.75s step-start 4s 12;
+  -webkit-animation: blink 0.75s step-start 4s 12;
+}
+
+
+
+
+/* ##################### DOWNLOAD MODAL ##################### */
+#downloadModal{
+	background-color: rgba(0,0,0,0.5);
+}
+
+#message{
+	height:80px; overflow-y: scroll;
+}
+
+#message p{
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 13px;
+}
+
+#dataSubmit{
+  position: relative;
+  overflow: hidden;
+}
+
+#dataSubmit:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+#dataSubmit:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+

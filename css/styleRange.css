@@ -1,0 +1,103 @@
+.slidecontainer {
+	position: relative;
+	width: 100%; /* Width of the outside container */
+	/*margin-top: -10px;
+	margin-bottom: -10px;*/
+}
+
+/* The slider itself */
+.slider {
+	position: absolute; top: 0; left: 0;
+	-webkit-appearance: none;  /* Override default CSS styles */
+	appearance: none;
+	width: 100%; /* Full-width */
+	height: 25px; /* Specified height */
+	border-radius: 25px;
+	background: #d3d3d3; /* Grey background */
+	outline: none; /* Remove outline */
+	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+	transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	border-radius: 50%;
+	background: #498AF3; /*#4CAF50;  Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	border-radius: 50%;
+	background: #498AF3; /*#4CAF50;  Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+.sliderLabel {
+	position: relative;
+	top: 2px;
+	left: 12px;
+	text-decoration: none;
+	pointer-events: none;
+	z-index: 10000;
+}
+
+
+
+
+
+
+
+
+
+#alphaSlider {
+    position: absolute;
+	width: 100px !important;
+	top: 50px;
+	left: 180px; /*left*/
+	-webkit-appearance: none;
+    border-radius: 25px;
+    background: white; /*#d3d3d3;*/
+    outline: none;
+    opacity: 0.87;
+    /*-webkit-transition: .2s;*/
+    /*transition: opacity .2s;*/
+	-webkit-transform:rotate(270deg); 
+	-moz-transform:rotate(270deg); 
+	-o-transform:rotate(270deg); 
+	-ms-transform:rotate(270deg); 
+	transform:rotate(270deg);
+	z-index: 100000;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#alphaSlider:hover {
+    opacity: 1;
+}
+
+#alphaSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background: url('./imgs/contrast.svg');
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+    cursor: pointer;
+}
+
+
+
+

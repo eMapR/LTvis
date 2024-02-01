@@ -1,0 +1,86 @@
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -where name='h04v03' /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -f "GeoJSON" -where name='h04v03' /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -f "GeoJSON" -where name='h04v03' /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -f "GeoJSON" -where name='h04v03' /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -f "GeoJSON" -where "name='"h04v03' /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -f "GeoJSON" -where "name='"h04v03' /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Opened /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+Number of features in conus_ard_grid_epsg5070.geojson: 726
+checking matching features
+name='h04v03'
+name 000001
+/data/visDataRequests/000001
+/usr/lib/anaconda/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda/share/gdal -f "GeoJSON" -where "name='h04v03'" /data/visDataRequests/000001/aoi.geojson /data/vectors/vis/conus_ard_grid_epsg5070.geojson
+clarype@oregonstate.edu
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000708/conus_canopy_cover_ARD_tile_h04v01.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000708/conus_canopy_cover_ARD_tile_h04v01.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000712/conus_land_cover_ARD_tile_h15v11.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000712/conus_land_cover_ARD_tile_h15v11.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000713/conus_land_cover_ARD_tile_h26v09.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000713/conus_land_cover_ARD_tile_h26v09.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000714/conus_biomass_ARD_tile_h09v09.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000714/conus_biomass_ARD_tile_h09v09.zip</a>
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000714/conus_canopy_cover_ARD_tile_h09v09.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000714/conus_canopy_cover_ARD_tile_h09v09.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000715/conus_land_cover_ARD_tile_h07v03.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000715/conus_land_cover_ARD_tile_h07v03.zip</a>
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000715/conus_biomass_ARD_tile_h07v03.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000715/conus_biomass_ARD_tile_h07v03.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000716/conus_land_cover_ARD_tile_h07v07.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000716/conus_land_cover_ARD_tile_h07v07.zip</a>
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000716/conus_biomass_ARD_tile_h07v07.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000716/conus_biomass_ARD_tile_h07v07.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000717/conus_biomass_ARD_tile_h10v05.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000717/conus_biomass_ARD_tile_h10v05.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000718/conus_impervious_cover_ARD_tile_h11v09.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000718/conus_impervious_cover_ARD_tile_h11v09.zip</a>

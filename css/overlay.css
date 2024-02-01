@@ -1,0 +1,148 @@
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999999;
+    cursor: pointer;
+}
+
+#mapCredits{
+	cursor: default;
+}
+
+.labels{
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    z-index: 1000000 ;
+}
+
+.labels i {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.vl {
+    border-left: 2px solid white;
+    height: 290px;
+    position: absolute;
+    left: 210px;
+    margin-left: -3px;
+    top: 73px;
+}
+
+.hl{
+    border-top: 1px solid white;
+    width: 20px;
+    position: absolute;
+    margin-left: -3px;
+
+}
+
+#creditContainer{
+	width:66%; 
+	margin:auto;
+	margin-top:100px;
+}
+
+
+#mapCreditsExit{
+	border: none; 
+	color: white; 
+	margin-right:6px; 
+	margin-top:4px;
+}
+
+
+     /* Style the element that is used to open and close the accordion class */
+ p.accordion {
+	 background-color: rgba(245,245,245, 0.9);
+	 color: rgba(0, 0, 0, 1);
+     cursor: pointer;
+     padding: 13px;
+     width: 100%;
+     text-align: left;
+     transition: 0.4s;
+     margin: 0px;
+ }
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+	background-color: rgba(180,180,180, 0.95)
+}
+
+/* Unicode character for "plus" sign (+) */
+p.accordion:after {
+	content: '\002B';
+    font-size: 35px;
+	line-height:0px;
+	font-weight:bold;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+	margin-top: 7px;
+}
+
+/* Unicode character for "minus" sign (-) */
+p.accordion.active:after {
+	content: "\2212";
+}
+
+/* Style the element that is used for the panel class */
+div.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+	background-color:white;
+    opacity: 0.8; 
+	margin-bottom:2px;
+}
+
+div.panel.show {
+	opacity: 0.8; /*  TODO: is this needed - since it is set above */
+    max-height: 220px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    overflow-y: auto;
+}
+
+.panel .li{
+	color:red;
+}
+
+#guideTxt{
+	width:60%; 
+	margin:auto;
+	margin-top:350px;
+	height:250px;
+	background-color: rgba(160,160,160, 0.6);
+	color: white;
+    max-height: 250px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    overflow-y: auto;
+	padding:10px;
+}
+
+#guideTxt p{
+	margin: 3px 0px 3px 10px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+
+
+

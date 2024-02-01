@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="175"
+   height="235"
+   viewBox="0 0 46.302083 62.177086"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="landcover.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4606">
+      <stop
+         style="stop-color:#000004;stop-opacity:1"
+         offset="0"
+         id="stop4602" />
+      <stop
+         id="stop4610"
+         offset="0.1"
+         style="stop-color:#180939;stop-opacity:1" />
+      <stop
+         style="stop-color:#3f0e5e;stop-opacity:1"
+         offset="0.2"
+         id="stop4612" />
+      <stop
+         id="stop4614"
+         offset="0.30000001"
+         style="stop-color:#68166c;stop-opacity:1" />
+      <stop
+         style="stop-color:#902567;stop-opacity:1"
+         offset="0.40000001"
+         id="stop4616" />
+      <stop
+         id="stop4618"
+         offset="0.5"
+         style="stop-color:#ba3655;stop-opacity:1" />
+      <stop
+         id="stop4622"
+         offset="0.60000002"
+         style="stop-color:#da513a;stop-opacity:1" />
+      <stop
+         id="stop4626"
+         offset="0.69999999"
+         style="stop-color:#f0781a;stop-opacity:1" />
+      <stop
+         style="stop-color:#f9a319;stop-opacity:1"
+         offset="0.80000001"
+         id="stop4628" />
+      <stop
+         id="stop4630"
+         offset="0.89999998"
+         style="stop-color:#fad245;stop-opacity:1" />
+      <stop
+         style="stop-color:#fcffa4;stop-opacity:1"
+         offset="1"
+         id="stop4604" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4594"
+       inkscape:collect="always">
+      <stop
+         id="stop4584"
+         offset="0"
+         style="stop-color:#009a00;stop-opacity:1;" />
+      <stop
+         style="stop-color:#009af1;stop-opacity:0.49803922"
+         offset="0.10782991"
+         id="stop4586" />
+      <stop
+         id="stop4588"
+         offset="0.26336396"
+         style="stop-color:#009a00;stop-opacity:0.24705882;" />
+      <stop
+         style="stop-color:#e59a00;stop-opacity:0.12156863"
+         offset="0.40550435"
+         id="stop4590" />
+      <stop
+         id="stop4596"
+         offset="0.70275217"
+         style="stop-color:#729a00;stop-opacity:0.05882353;" />
+      <stop
+         style="stop-color:#399a00;stop-opacity:0.02745098;"
+         offset="0.99000001"
+         id="stop4598" />
+      <stop
+         id="stop4592"
+         offset="1"
+         style="stop-color:#009a00;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4495-1-5-5">
+      <stop
+         style="stop-color:#009a00;stop-opacity:1;"
+         offset="0"
+         id="stop4491" />
+      <stop
+         id="stop4499"
+         offset="0.24804153"
+         style="stop-color:#009af1;stop-opacity:0.49803922" />
+      <stop
+         style="stop-color:#009a00;stop-opacity:0.24705882;"
+         offset="0.50675017"
+         id="stop4501" />
+      <stop
+         id="stop4503"
+         offset="0.65153605"
+         style="stop-color:#e59a00;stop-opacity:0.12156863" />
+      <stop
+         style="stop-color:#009a00;stop-opacity:0;"
+         offset="1"
+         id="stop4493" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4495-1-5-5"
+       id="linearGradient4505"
+       gradientUnits="userSpaceOnUse"
+       x1="45.435822"
+       y1="82.309525"
+       x2="45.26265"
+       y2="118.58234" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4495-1-5-5"
+       id="linearGradient4572"
+       gradientUnits="userSpaceOnUse"
+       x1="11.368089"
+       y1="111.24767"
+       x2="102.22146"
+       y2="111.24767" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4594"
+       id="linearGradient4582"
+       x1="12.695303"
+       y1="140.9146"
+       x2="113.7232"
+       y2="140.9146"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4606"
+       id="linearGradient4608"
+       x1="42.228584"
+       y1="66.349091"
+       x2="42.228584"
+       y2="119.26576"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-185.61485)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-19.751032"
+     inkscape:cy="106.74146"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g4885"
+     showgrid="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-global="true"
+     inkscape:object-paths="true"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     showborder="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-grids="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4856"
+       spacingx="1.3229167"
+       spacingy="1.3229167" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-234.82289)">
+    <g
+       id="g4885"
+       transform="translate(2.9200745e-8,1.303261)">
+      <g
+         id="g5082"
+         transform="translate(3.9686533e-7,4.9033137e-5)">
+        <rect
+           style="opacity:1;fill:#5475a8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4548"
+           width="46.302082"
+           height="3.6574817"
+           x="6.1767579e-008"
+           y="233.51958" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458365"
+           y="236.11176"
+           id="text4546"><tspan
+             sodipodi:role="line"
+             id="tspan4544"
+             x="0.26458365"
+             y="236.11176"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Open Water</tspan></text>
+        <rect
+           y="292.03918"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4550"
+           style="opacity:1;fill:#64b3d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2513023;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260456, 1.00520912;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4554"
+           y="294.64859"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="294.64859"
+             x="0.26458365"
+             id="tspan4552"
+             sodipodi:role="line">Emergent Herbaceous Wetlands</tspan></text>
+        <rect
+           y="237.17706"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4556"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4560"
+           y="239.86845"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="239.86845"
+             x="0.26458365"
+             id="tspan4558"
+             sodipodi:role="line">Perennial Ice/Snow</tspan></text>
+        <rect
+           y="240.83455"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4571"
+           style="opacity:1;fill:#e29e8c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4575"
+           y="243.45152"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="243.45152"
+             x="0.26458365"
+             id="tspan4573"
+             sodipodi:role="line">Developed, Open Space</tspan></text>
+        <rect
+           y="244.49203"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4582"
+           style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4586"
+           y="247.10901"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="247.10901"
+             x="0.26458365"
+             id="tspan4584"
+             sodipodi:role="line">Developed, Medium Intensity</tspan></text>
+        <rect
+           y="248.14952"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4593"
+           style="opacity:1;fill:#b50000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4597"
+           y="250.75893"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="250.75893"
+             x="0.26458365"
+             id="tspan4595"
+             sodipodi:role="line">Developed High Intensity</tspan></text>
+        <rect
+           y="251.80698"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4604"
+           style="opacity:1;fill:#d2cdc0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4608"
+           y="254.42395"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="254.42395"
+             x="0.26458365"
+             id="tspan4606"
+             sodipodi:role="line">Barren Land (Rock/Sand/Clay)</tspan></text>
+        <rect
+           y="255.46445"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4615"
+           style="opacity:1;fill:#85c77e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4619"
+           y="258.34393"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="258.34393"
+             x="0.26458365"
+             id="tspan4617"
+             sodipodi:role="line">Deciduous Forest</tspan></text>
+        <rect
+           y="259.12192"
+           x="6.1767579e-008"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4626"
+           style="opacity:1;fill:#38814e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4630"
+           y="261.68515"
+           x="0.26458365"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="261.68515"
+             x="0.26458365"
+             id="tspan4628"
+             sodipodi:role="line">Evergreen Forest</tspan></text>
+        <rect
+           style="opacity:1;fill:#d4e7b0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4681"
+           width="46.302082"
+           height="3.6574817"
+           x="3.5766601e-007"
+           y="262.77939" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458395"
+           y="265.65887"
+           id="text4685"><tspan
+             sodipodi:role="line"
+             id="tspan4683"
+             x="0.26458395"
+             y="265.65887"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Mixed Forest</tspan></text>
+        <rect
+           y="266.43686"
+           x="3.5766601e-007"
+           height="3.6574817"
+           width="46.302082"
+           id="rect4687"
+           style="opacity:1;fill:#af963c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4691"
+           y="269.32324"
+           x="0.26458395"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+             y="269.32324"
+             x="0.26458395"
+             id="tspan4689"
+             sodipodi:role="line">Dwarf Scrub</tspan></text>
+        <rect
+           style="opacity:1;fill:#dcca8f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4703"
+           width="46.302082"
+           height="3.6574817"
+           x="3.5766601e-007"
+           y="270.09433" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458395"
+           y="272.78574"
+           id="text4707"><tspan
+             sodipodi:role="line"
+             id="tspan4705"
+             x="0.26458395"
+             y="272.78574"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Shrub/Scrub</tspan></text>
+        <rect
+           style="opacity:1;fill:#fde9aa;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4758"
+           width="46.302082"
+           height="3.6574817"
+           x="6.1767579e-008"
+           y="273.75183" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458365"
+           y="276.44324"
+           id="text4762"><tspan
+             sodipodi:role="line"
+             id="tspan4760"
+             x="0.26458365"
+             y="276.44324"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Grassland/Herbaceous</tspan></text>
+        <rect
+           style="opacity:1;fill:#d1d182;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4769"
+           width="46.302082"
+           height="3.6574817"
+           x="6.1767579e-008"
+           y="277.4093" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458365"
+           y="280.01871"
+           id="text4773"><tspan
+             sodipodi:role="line"
+             id="tspan4771"
+             x="0.26458365"
+             y="280.01871"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Sedge/Herbaceous</tspan></text>
+        <rect
+           style="opacity:1;fill:#fbf65d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4780"
+           width="46.302082"
+           height="3.6574817"
+           x="6.1767579e-008"
+           y="281.06677" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458365"
+           y="283.68375"
+           id="text4784"><tspan
+             sodipodi:role="line"
+             id="tspan4782"
+             x="0.26458365"
+             y="283.68375"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Pasture/Hay</tspan></text>
+        <rect
+           style="opacity:1;fill:#ca9146;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25130227;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260454, 1.0052091;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4791"
+           width="46.302082"
+           height="3.6574817"
+           x="6.1767579e-008"
+           y="284.72424" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458365"
+           y="287.34122"
+           id="text4795"><tspan
+             sodipodi:role="line"
+             id="tspan4793"
+             x="0.26458365"
+             y="287.34122"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Cultivated Crops</tspan></text>
+        <rect
+           style="opacity:1;fill:#c8e6f8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2513023;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50260456, 1.00520912;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4802"
+           width="46.302082"
+           height="3.6574817"
+           x="6.1767579e-008"
+           y="288.38171" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           x="0.26458365"
+           y="290.99869"
+           id="text4806"><tspan
+             sodipodi:role="line"
+             id="tspan4804"
+             x="0.26458365"
+             y="290.99869"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Woody Wetlands</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
