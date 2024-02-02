@@ -990,34 +990,34 @@ map3.sync(map2);
 //var marker = L.marker([44.190762, -122.553686]).addTo(map);
 
 // ...add drawn feature group
-var drawnItems = new L.FeatureGroup();
-map.addLayer(drawnItems);
+//var drawnItems = new L.FeatureGroup();
+//map.addLayer(drawnItems);
 
 // ...make the draw toolbar
-var drawControl = new L.Control.Draw({
-    position: 'topright',
-    draw: {
-        rectangle: false,
-        polyline: false,
-        polygon: false,
-        circle: false,
-        marker: false
-    },
-    edit: {
-        featureGroup: drawnItems,
-        remove: true
-    }
-});
+//var drawControl = new L.Control.Draw({
+//    position: 'topright',
+//    draw: {
+//        rectangle: false,
+//        polyline: false,
+//        polygon: false,
+//        circle: false,
+//        marker: false
+//    },
+//    edit: {
+//        featureGroup: drawnItems,
+//        remove: true
+//    }
+//});
 
-map.on("layeradd", function (event) {
-    drawnItems.bringToFront();
-});
+//map.on("layeradd", function (event) {
+//    drawnItems.bringToFront();
+//});
 
 
-map.on(L.Draw.Event.CREATED, function (e) {
-    var layer = e.layer;
-    drawnItems.addLayer(layer);
-});
+//map.on(L.Draw.Event.CREATED, function (e) {
+//    var layer = e.layer;
+//    drawnItems.addLayer(layer);
+//});
 
 
 //map.addControl(drawControl);
