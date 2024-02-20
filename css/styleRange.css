@@ -66,7 +66,7 @@
 	width: 100px !important;
 	top: 50px;
 	left: 180px; /*left*/
-	-webkit-appearance: none;
+	/*-webkit-appearance: none;*/
     border-radius: 25px;
     background: white; /*#d3d3d3;*/
     outline: none;
@@ -87,7 +87,7 @@
 }
 
 #alphaSlider::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     appearance: none;
     width: 25px;
     height: 25px;

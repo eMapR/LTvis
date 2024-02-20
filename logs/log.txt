@@ -84,3 +84,7 @@ peterclary87@gmail.com
 <a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000717/conus_biomass_ARD_tile_h10v05.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000717/conus_biomass_ARD_tile_h10v05.zip</a>
 peterclary87@gmail.com
 <a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000718/conus_impervious_cover_ARD_tile_h11v09.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000718/conus_impervious_cover_ARD_tile_h11v09.zip</a>
+peterclary87@gmail.com
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000720/conus_land_cover_ARD_tile_h04v02.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000720/conus_land_cover_ARD_tile_h04v02.zip</a>
+emapr.lab@oregonstate.edu
+<a href=http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000730/conus_land_cover_ARD_tile_h09v09.zip>http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests/000730/conus_land_cover_ARD_tile_h09v09.zip</a>
