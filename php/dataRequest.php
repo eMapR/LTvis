@@ -1,6 +1,6 @@
 <?php
 	
-	$cmd = "/usr/lib/anaconda3/bin/python ../py/dataRequest.py " . "'".json_encode($_POST)."'" . " >> /var/www/emapr/pages/data/viz_v2/logs/log.txt";
+	$cmd = "/usr/lib/anaconda3/bin/python ../py/dataRequest.py " . "'".json_encode($_POST)."'";
 	exec($cmd, $out);
 	//echo $cmd;
 	//echo count($out);
