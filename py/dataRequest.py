@@ -39,10 +39,7 @@ def sendEmail(zipFiles, email):
         body = 'Your\ eMapR\ data\ request\ is\ ready.\ If\ the\ link\ does\ not\ work\ try\ coping\ and\ pasting\ it\ into\ the\ address\ bar.\ '+zipFiles+'\ The\ data\ will\ be\ available\ for\ one\ week.\ Please\ contact\ Peter\ Clary\ at\ clarype@oregonstate.edu\ for\ assistance\ with\ questions\ or\ problems.\ Best\ regards,\ eMapR\ Lab\ Group'
         cmd = 'php /var/www/emapr/pages/data/viz_v2//php/sendEmail.php '+email+' '+ body
         subprocess.run(cmd, shell=True, stdout=subprocess.PIPE)
-#        for i in zipFiles:
-#            print(i)
-#        print("Email sent!")
-        return 
+        return 0 
 
 
 
@@ -94,9 +91,6 @@ def main(post):
         dataIds = post['data']    # dataset
         email = post['email']
         metadata = '/data/maps/visdata_metadata.json'# hard coded
-        
- #removes the unicode from the value list items
-        #value = [ x.encode('ascii', errors='replace') for x in value ] # this was adding a 'b' to the values 
         
         # open the data src for reading
         driver = ogr.GetDriverByName("GeoJSON")
@@ -163,25 +157,9 @@ def main(post):
         for dataId in dataIds:                # loops througth the selected datasets
                 for w, b in zip(value, extList):# loops through each tile/extent 'w' is the tile and 'b' is the extent
                         for thisData in metadata:           # loops throught the datasets in the metadata
-                                #print (thisData['id'])
-                                #print (dataId)
                                 if thisData['id'] == dataId:      # if the selected datasets match the one of the metadata's datasets 
-                                        #print ('found match')
                                         break             # stops the loop so the code blocks below can operate on 'thisData'
                         
-                        # check to see that the poly ext is not outide of the data
-                                #if not isInData(b, thisData['dataPath']): # b is the extent
-                                #        messages.append('Warning: Data: '+dataId+' does not intersect the feature bounding box - cannot process.\n')
-                                #        print ('<strong>Error</strong>: '+dataId+' does not intersect the feature bounding box - cannot process.')
-                                #        continue
-                                #else:
-                                        #print('no matches found check dataId')
-					#continue
-                                        #print ('dataid', dataId)
-                        
-                        # subset the feature so we can store the geojson as text in the database theseData  
-                                # make a basename
-                        #print (thisData['dataName'])
                         outBase = '{}_{}_{}.tif'.format(thisData['dataName'], key, str(w)) # w is the value
                         # make out data file
                         outData = os.path.join(requestDir,outBase)      
@@ -189,11 +167,6 @@ def main(post):
                  
                         cmd = "/usr/lib/anaconda3/bin/ogr2ogr --config GDAL_DATA /usr/lib/anaconda3/share/gdal -q -f \"GeoJSON\" -where \""+key+"='"+w+"'\" "+outPoly+" "+inPoly # w is the value
                         status = subprocess.call(cmd, shell=True) # need to use shell=True because it is a full string that is being passed, if we don;t want shell=True, then we need to split the arguments
-                        #if cmdFailed:
-                        #  return 'Error: ogr2ogr command to filter feature from polygon failed'      
-                         
-         #break
-        
                         # subset the data
                         projwin = '-projwin {} {} {} {}'.format(b[0], b[1], b[2], b[3]) #ext[0], ext[3], ext[1], ext[2] b is the extent
                         cmd = '/usr/lib/anaconda3/bin/gdal_translate --config GDAL_DATA /usr/lib/anaconda/share/gdal -q '+projwin+' '+thisData['dataPath']+' '+outData
@@ -237,10 +210,8 @@ def main(post):
         print(email)
         for i in zipFiles:
             print("<a href="+i+">"+i+"</a>")
-        #print(zipFiles)
         # ADD PRAR FOR LIST MESSAGES
         emailStatus = sendEmail(zipFiles, email)
-        #print("email sent")
 
         # make database entry
         with open(outPoly, "r") as f:
