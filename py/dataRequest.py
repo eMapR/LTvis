@@ -43,7 +43,7 @@ class Requests:
             os.mkdir(self.request_dir)
             os.chmod(self.request_dir, 0o777)
 
-        self.symlinkDir = os.path.join('/var/www/emapr/pages/data/viz_v2/requests',self.name)
+        self.symlinkDir = os.path.join('/var/www/emapr/pages/data/viz/requests',self.name)
         if not os.path.isdir(self.symlinkDir):
                 os.makedirs(self.symlinkDir)
 
@@ -96,7 +96,7 @@ class Requests:
     def sendEmail(self, zipFiles, email):
         zipFiles = '\ ,\ '.join([z for z in zipFiles])
         body = 'Your\ eMapR\ data\ request\ is\ ready.\ If\ the\ link\ does\ not\ work\ try\ coping\ and\ pasting\ it\ into\ the\ address\ bar.\ '+zipFiles+'\ The\ data\ will\ be\ available\ for\ one\ week.\ Please\ contact\ Peter\ Clary\ at\ clarype@oregonstate.edu\ for\ assistance\ with\ questions\ or\ problems.\ Best\ regards,\ eMapR\ Lab\ Group'
-        cmd = 'php /var/www/emapr/pages/data/viz_v2//php/sendEmail.php '+email+' '+ body
+        cmd = 'php /var/www/emapr/pages/data/viz/php/sendEmail.php '+email+' '+ body
         subprocess.run(cmd, shell=True, stdout=subprocess.PIPE)
         return 0 
 
@@ -161,7 +161,7 @@ class Requests:
 
     def send_data_links_email(self):
         # Forming the data links
-        self.zipFiles = [os.path.join('http://emapr.ceoas.oregonstate.edu/pages/data/viz_v2/requests', self.name, z) for z in self.zipFiles]
+        self.zipFiles = [os.path.join('http://emapr.ceoas.oregonstate.edu/pages/data/viz/requests', self.name, z) for z in self.zipFiles]
 
         # Sending the email
         self.sendEmail(self.zipFiles, self.email)
