@@ -1,7 +1,11 @@
 // this object will be retrieved from the server when page is loading - it will tell us what data is available and how to get it and set the interface
 
 // SOME GLOBALS
-var dataSet = dataSets.CONUS[0];
+
+var arr_keys = Object.keys(dataSets);
+var dataSet = "#"+dataSets[arr_keys[0]][0]
+
+//var dataSet = dataSets.CONUS[0];
 var lastActiveSection = 'singleYearContainer'; // tracker for whatever section of the menu was last active - default to single year display
 var mapList = ['map', 'flickerMap', 'map1', 'map2', 'map3'];
 var lyrGroups = {
@@ -295,7 +299,14 @@ $(document).ready(function () {
                 '</div>')
         }
     }
-    $('#lt_landcover_vote').trigger('click');//---------------   checks the first biomassLT box
+    var arr_keys = Object.keys(dataSets);
+    var first = "#"+dataSets[arr_keys[0]][0].id
+    var first_key = "#"+arr_keys[0]
+    $(first).trigger('click');//---------------   checks the first biomassLT box
+    $(first_key).trigger('click');//---------------   checks the first biomassLT box
+//    console.log("here")
+//    console.log(first)
+//    $('#lt_landcover_vote').trigger('click');//---------------   checks the first biomassLT box
 
 
 });
@@ -630,12 +641,6 @@ function displayHandler(id, repeat = false) {
 $(document).ready(function () {
 
     $('.layerButton').click(function () {
-        /*var el = $(this).next('.layerContainer')
-         if(el.hasClass('w3-show')){
-         el.removeClass('w3-show')
-         } else{
-         el.addClass('w3-show')
-         }*/
         if ($(this).next('.layerContainer').hasClass('w3-show')) {
             $(this).next('.layerContainer').removeClass('w3-show');
         } else {
@@ -643,49 +648,41 @@ $(document).ready(function () {
             $(this).next('.layerContainer').addClass('w3-show');
         }
     });
-    $('.dataCover').click(function () {
-        if ($(this).next('.dataPage').hasClass('w3-show')) {
-            //$(this).next('.dataPage').removeClass('w3-show');
 
-        } else {
+    $('.dataCover').click(function () {
             $('.dataPage').removeClass('w3-show');
             $(this).next('.dataPage').addClass('w3-show');
 
-        }
-           if ($('#CONUS').hasClass('w3-show')){
+        if ($('#CONUS').hasClass('w3-show')){
             map.flyTo([40, -95],5)
-            $('#lt_landcover_vote').trigger('click')
+            $('#lt_landcover_vote').trigger('click') // two of the same statement to remove pervious layer.
             $('#lt_landcover_vote').trigger('click')
 
         } else if ($('#WAORCA').hasClass('w3-show')){
             map.flyTo([42, -121],6)
             $('#biomassLI').trigger('click')
             $('#biomassLI').trigger('click')
-        }
-
-
-        else if ($('#Disturbance').hasClass('w3-show')){
+        } else if ($('#Disturbance').hasClass('w3-show')){
             map.flyTo([42, -121],6)
 
             $('#disturbance_attribution').trigger('click')
             $('#disturbance_attribution').trigger('click')
         }
-        else if ($('#Bugnet').hasClass('w3-show')){
-            map.flyTo([45.5, -119],7)
-
-            $('#bugnet_r6').trigger('click')
-            $('#bugnet_r6').trigger('click')
+        else if ($('#Renoster').hasClass('w3-show')){
+            map.flyTo(dataSets.Renoster[0].coordinates,dataSets.Renoster[0].zoom)
+            console.log(dataSets)
+            $('#renoster').trigger('click')
+            $('#renoster').trigger('click')
         }
 
 
     })
-});
+//});
 
 
-$(document).ready(function () {
+//$(document).ready(function () {
     $("#CONUS").addClass('w3-show')
 
-});
 
 
 // DO STUFF WHEN A SECTION BUTTON IS PRESSED
@@ -701,6 +698,7 @@ $('.activityButton').click(function () {
     lastActiveSection = id
 });
 
+});
 
 // HANDLER FOR CLICKING ON THE PLOT EXIT BUTTON
 function hidePlot() {
@@ -977,62 +975,6 @@ map3.sync(map1);
 map3.sync(map2);
 
 
-/*
- var leftSwipe = getDataTileLyr(1990)
- var rightSwipe = getDataTileLyr(2000)
-
- console.log(leftSwipe)
- console.log(rightSwipe)
- sideBySide = L.control.sideBySide(leftSwipe, rightSwipe);
- sideBySide.addTo(map3);
- */
-
-//var marker = L.marker([44.190762, -122.553686]).addTo(map);
-
-// ...add drawn feature group
-//var drawnItems = new L.FeatureGroup();
-//map.addLayer(drawnItems);
-
-// ...make the draw toolbar
-//var drawControl = new L.Control.Draw({
-//    position: 'topright',
-//    draw: {
-//        rectangle: false,
-//        polyline: false,
-//        polygon: false,
-//        circle: false,
-//        marker: false
-//    },
-//    edit: {
-//        featureGroup: drawnItems,
-//        remove: true
-//    }
-//});
-
-//map.on("layeradd", function (event) {
-//    drawnItems.bringToFront();
-//});
-
-
-//map.on(L.Draw.Event.CREATED, function (e) {
-//    var layer = e.layer;
-//    drawnItems.addLayer(layer);
-//});
-
-
-//map.addControl(drawControl);
-
-
-//############################################################################################################################################			
-//############### DRAW STUFF  \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/
-//############################################################################################################################################
-
-
-//############################################################################################################################################			
-//############### DRAW STUFF /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\
-//############################################################################################################################################
-
-
 var multiTrace = [];
 var multiTraceColor = ["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c"];
 
@@ -1127,5 +1069,5 @@ info.update = function () {
 
 info.addTo(map);
 
-$("#legendControl" ).trigger( "click" );
+$("#legendControl" ).trigger( "click" ); // opens legend
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

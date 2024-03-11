@@ -201,27 +201,29 @@ var dataSets = {
         "markerSize": '20',
         "legendPath": "./imgs/att.PNG"
 
-    }]//,
- //   "Bugnet":[{
-//	"name": "Region 6",
-  //      "minYear": 2018,
-//        "maxYear": 2022,
-//        "yMin": 0, // this sets the plotting yMin
-//        "yMax": 3, // this sets the plotting yMax
-//        "dType": "categorical",
-//        "scalar": null,
-//        "yAxisLab": "Bugnet likelihood Class",
-//        "tmsURL": "http://emapr.ceoas.oregonstate.edu/pages/data/viz/tms/bugnet_r6/opt2",
-//        "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
-//        "id": "bugnet_r6",
-//        "dataPath": "/data/maps/bugnet_R6/option2/annual/bugnet_option2_v1.vrt",
-//        "plotDisplay": {
-//            1: {color: 'gray', label: 'one'},
-//            2: {color: 'orange', label: 'two'},
-//            3: {color: 'red', label: 'three'},
-//        },
-//        "markerSize": '20'
-//        //"legendPath": "./imgs/att.PNG"
-//
-//    }]
+    }],
+     "Renoster":[{
+	"name": "Renoster",
+        "minYear": 1984,
+        "maxYear": 2022,
+        "yMin": 0, // this sets the plotting yMin
+        "yMax": 3, // this sets the plotting yMax
+        "dType": "categorical",
+        "scalar": null,
+        "yAxisLab": "Bugnet likelihood Class",
+        "tmsURL": "http://192.168.1.45/LTvis/tms/imgs",
+        "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
+        "id": "renoster",
+        "dataPath": "/data/maps/bugnet_R6/option2/annual/bugnet_option2_v1.vrt",
+        "plotDisplay": {
+            1: {color: 'gray', label: 'one'},
+            2: {color: 'orange', label: 'two'},
+            3: {color: 'red', label: 'three'},
+        },
+        "markerSize": '20',
+        "coordinates": [-12.017,-69.45],
+        "zoom": 9
+        //"legendPath": "./imgs/att.PNG"
+
+    }]
 };
