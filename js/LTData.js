@@ -4,6 +4,7 @@
 var dataSets = {
 
     "WAORCA": [{
+        "title":"WAORCA",
         "name": "Biomass",
         "minYear": 1990,
         "maxYear": 2012,
@@ -16,8 +17,11 @@ var dataSets = {
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "biomassLI",
         "dataPath": "/data/maps/WAORCA_biomass/crm/default.vrt",
-        "legendPath": "./imgs/biomass.svg"
+        "legendPath": "./imgs/biomass.svg",
+        "coordinates": [41.079,-121.06],
+        "zoom": 5
     }, {
+        "title":"WAORCA",
         "name": "Canopy Cover",
         "minYear": 1990,
         "maxYear": 2012,
@@ -30,8 +34,12 @@ var dataSets = {
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "canopycoverLI",
         "dataPath": "/data/maps/WAORCA_pystem/canopycover/default.vrt",
-        "legendPath": "./imgs/canopy.svg"
+        "legendPath": "./imgs/canopy.svg",
+        "coordinates": [41.079,-121.06],
+        "zoom": 5
+
     }, {
+        "title":"WAORCA",
         "name": "Impervious Cover",
         "minYear": 1990,
         "maxYear": 2012,
@@ -44,8 +52,12 @@ var dataSets = {
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "impervcoverLI",
         "dataPath": "/data/maps/WAORCA_pystem/impervcover/default.vrt",
-        "legendPath": "./imgs/imperv.svg"
+        "legendPath": "./imgs/imperv.svg",
+        "coordinates": [41.079,-121.06],
+        "zoom": 5
+
     }, {
+        "title":"WAORCA",
         "name": "Land Cover",
         "minYear": 1990, // min year in the series
         "maxYear": 2012, // max year in the series
@@ -81,10 +93,14 @@ var dataSets = {
             95: {color: '#70a3ba', label: 'Emergent Herbaceous Wetlands'}
         },
         "markerSize": '20',
-        "legendPath": "./imgs/landcover.svg"
+        "legendPath": "./imgs/landcover.svg",
+        "coordinates": [41.079,-121.06],
+        "zoom": 5
+
     }],
 
     "CONUS":[{
+        "title":"CONUS",
         "name": "Land Cover",
         "minYear": 1990,
         "maxYear": 2017,
@@ -120,8 +136,12 @@ var dataSets = {
             95: {color: '#70a3ba', label: 'Emergent Herbaceous Wetlands'}
         },
         "markerSize": '20',
-        "legendPath": "./imgs/landcover.svg"
+        "legendPath": "./imgs/landcover.svg",
+        "coordinates": [40,-95],
+        "zoom": 5
+
     }, {
+        "title":"CONUS",
         "name": "Biomass",
         "minYear": 1990,
         "maxYear": 2017,
@@ -134,8 +154,12 @@ var dataSets = {
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "lt-stem_biomass_nbcd_v0.1_median",
         "dataPath": "/data/maps/CONUS/biomass_nbcd/lt-stem_biomass_nbcd_v0.1_median.vrt",
-        "legendPath": "./imgs/biomass_nbcd_fia.svg"
+        "legendPath": "./imgs/biomass_nbcd_fia.svg",
+        "coordinates": [41.079,-121.06],
+        "zoom": 5
+
     }, {
+        "title":"CONUS",
         "name": "Canopy Cover",
         "minYear": 1990,
         "maxYear": 2017,
@@ -148,8 +172,12 @@ var dataSets = {
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "lt-stem_forest_canopy_cover_nlcd_v0.1_mean",
         "dataPath": "/data/maps/CONUS/lt-stem_forest_canopy_cover_nlcd_v0.1/lt-stem_forest_canopy_cover_nlcd_v0.1_mean.vrt",
-        "legendPath": "./imgs/canopy_conus.svg"
+        "legendPath": "./imgs/canopy_conus.svg",
+        "coordinates": [40,-95],
+        "zoom": 5
+
     }, {
+        "title":"CONUS",
         "name": "Impervious Cover",
         "minYear": 1990,
         "maxYear": 2017,
@@ -162,10 +190,14 @@ var dataSets = {
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "lt-stem_impervious_surface_nlcd_v0.1_median",
         "dataPath": "/data/maps/CONUS/lt-stem_impervious_surface_nlcd_v0.1/lt-stem_impervious_surface_nlcd_v0.1_median.vrt",
-        "legendPath": "./imgs/imperv.svg"
+        "legendPath": "./imgs/imperv.svg",
+        "coordinates": [41.079,-95],
+        "zoom": 5
+
     }],
     "Disturbance":[{
-	"name": "Disturbance",
+        "title":"Disturbance",
+	"name": "disturbance",
         "minYear": 1985,
         "maxYear": 2012,
         "yMin": 0, // this sets the plotting yMin
@@ -199,11 +231,15 @@ var dataSets = {
             201: {color: '#00c9d3', label: 'False Change'}
         },
         "markerSize": '20',
-        "legendPath": "./imgs/att.PNG"
+        "legendPath": "./imgs/att.PNG",
+        "coordinates": [41.079,-121.06],
+        "zoom": 5
+
 
     }],
      "Renoster":[{
-	"name": "Renoster",
+        "title":"Renoster",
+	"name": "renoster",
         "minYear": 1984,
         "maxYear": 2022,
         "yMin": 0, // this sets the plotting yMin

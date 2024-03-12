@@ -1,11 +1,11 @@
 // this object will be retrieved from the server when page is loading - it will tell us what data is available and how to get it and set the interface
 
 // SOME GLOBALS
-
+//gets the first dataset from LTData.js for startup display
 var arr_keys = Object.keys(dataSets);
-var dataSet = "#"+dataSets[arr_keys[0]][0]
+var dataSet_jid = "#"+arr_keys[0] 
+var dataSet = dataSets[arr_keys[0]][0]
 
-//var dataSet = dataSets.CONUS[0];
 var lastActiveSection = 'singleYearContainer'; // tracker for whatever section of the menu was last active - default to single year display
 var mapList = ['map', 'flickerMap', 'map1', 'map2', 'map3'];
 var lyrGroups = {
@@ -260,28 +260,20 @@ $(".baseList").click(function () {
 // a function to return the the dataset object for the data set that was clicked on in the dataset menu
 function getDataSetClicked(id) {
     var keys = Object.keys(dataSets);
-    console.log(keys);
     for (var k = 0; k < keys.length; k++) {
         for (var i = 0; i < dataSets[keys[k]].length; i++) {
-            console.log(dataSets[keys[k]][i].id);
             if (dataSets[keys[k]][i].id === id) {
                 return dataSets[keys[k]][i]
             }
         }
     }
-
-    //for (var i = 0; i < dataSets.WAORCA.length; i++) {
-    //    if (dataSets.WAORCA[i].id == id) {
-    //       return dataSets.WAORCA[i]
-    //    }
-    //}
 }
 
 // load the datasets into the list element
 $(document).ready(function () {
     for (a in dataSets) { //------------------------------    loops through each project CONUS and WAORCA.
         $("#dataSelectContainer").append('' +
-            '<div class="dataCover pointer"><p>' + '  ' + a + '<a href="http://emapr.ceoas.oregonstate.edu/", target="_blank" ><i class="fa fa-info-circle w3-right" style="margin-top: 4px; margin-right: 0.2em; vertical-align: top; aria-hidden="true"></i></a></p></div>' +
+            '<div class="dataCover pointer"><p>' + a + '<a href="http://emapr.ceoas.oregonstate.edu/", target="_blank" ><i class="fa fa-info-circle w3-right" style="margin-top: 4px; margin-right: 0.2em; vertical-align: top; aria-hidden="true"></i></a></p></div>' +
             '<div id="' + a + '" class="dataPage w3-hide" style="height: auto; overflow-y: auto;">' +
             '<div id="' + a + 2 + '" class="datalistContainer"></div></div>');
         var place = "#" + a + "2"; //-------------------------make a jquery selector for each dataset to be appended to
@@ -304,11 +296,6 @@ $(document).ready(function () {
     var first_key = "#"+arr_keys[0]
     $(first).trigger('click');//---------------   checks the first biomassLT box
     $(first_key).trigger('click');//---------------   checks the first biomassLT box
-//    console.log("here")
-//    console.log(first)
-//    $('#lt_landcover_vote').trigger('click');//---------------   checks the first biomassLT box
-
-
 });
 
 
@@ -318,8 +305,9 @@ $(document).on("click", ".dataList", function () {
     $(".dataList").prop("checked", false);
     $(this).prop("checked", true);
 
-    // set the new dataSet
     dataSet = getDataSetClicked($(this).attr('id'));
+    dataSet_jid = "#"+dataSet.title 
+
     console.log(dataSet)
 
     // reset the slide min and max 
@@ -650,53 +638,30 @@ $(document).ready(function () {
     });
 
     $('.dataCover').click(function () {
-            $('.dataPage').removeClass('w3-show');
-            $(this).next('.dataPage').addClass('w3-show');
-
-        if ($('#CONUS').hasClass('w3-show')){
-            map.flyTo([40, -95],5)
-            $('#lt_landcover_vote').trigger('click') // two of the same statement to remove pervious layer.
-            $('#lt_landcover_vote').trigger('click')
-
-        } else if ($('#WAORCA').hasClass('w3-show')){
-            map.flyTo([42, -121],6)
-            $('#biomassLI').trigger('click')
-            $('#biomassLI').trigger('click')
-        } else if ($('#Disturbance').hasClass('w3-show')){
-            map.flyTo([42, -121],6)
-
-            $('#disturbance_attribution').trigger('click')
-            $('#disturbance_attribution').trigger('click')
+        $('.dataPage').removeClass('w3-show');
+        $(this).next('.dataPage').addClass('w3-show');
+        var set = dataSets[$(this).text()][0]
+        if ($("#"+set.title).hasClass('w3-show')){
+            map.flyTo(set.coordinates,set.zoom)
+            $('#'+set.id).trigger('click') // two of the same statement to remove pervious layer.
+            $('#'+set.id).trigger('click')
         }
-        else if ($('#Renoster').hasClass('w3-show')){
-            map.flyTo(dataSets.Renoster[0].coordinates,dataSets.Renoster[0].zoom)
-            console.log(dataSets)
-            $('#renoster').trigger('click')
-            $('#renoster').trigger('click')
-        }
-
-
     })
-//});
 
+    $(dataSet_jid).addClass('w3-show')
 
-//$(document).ready(function () {
-    $("#CONUS").addClass('w3-show')
+    // DO STUFF WHEN A SECTION BUTTON IS PRESSED
+    $('.activityButton').click(function () {
+        // show/hide the contents of the sections
+        $('.sectionContainer').removeClass('w3-show');
+        $(this).next('.sectionContainer').addClass('w3-show');
+        $('#overlaySelectContainer').removeClass('w3-show'); //hides the download container when activity buttons are pressed
 
-
-
-// DO STUFF WHEN A SECTION BUTTON IS PRESSED
-$('.activityButton').click(function () {
-    // show/hide the contents of the sections
-    $('.sectionContainer').removeClass('w3-show');
-    $(this).next('.sectionContainer').addClass('w3-show');
-    $('#overlaySelectContainer').removeClass('w3-show'); //hides the download container when activity buttons are pressed
-
-    // do a default action for each section
-    var id = $(this).next('.sectionContainer').attr('id');
-    displayHandler(id, repeat = false);
-    lastActiveSection = id
-});
+        // do a default action for each section
+        var id = $(this).next('.sectionContainer').attr('id');
+        displayHandler(id, repeat = false);
+        lastActiveSection = id
+    });
 
 });
 
@@ -707,11 +672,6 @@ function hidePlot() {
 
 $("#hidePlot").click(function () {
     hidePlot()
-    //if ($("#plot").is(":visible")) {
-    //   $("#plot").hide();
-    //} else {
-    //    $("#plot").show();
-    //}
 });
 
 
@@ -728,8 +688,8 @@ var a = $(".slider").on("input", function () { // Peter added the a var
 
 // define the L.map options
 var mapOptions = {
-    center: [39, -93],  //TODO: this depends on the dataset - it needs to be an attribute of the object
-    zoom: 5,
+    center: dataSet.coordinates,  //TODO: this depends on the dataset - it needs to be an attribute of the object
+    zoom: dataSet.zoom,
     minZoom: 0,
     maxZoom: 13,
     zoomControl: false,
@@ -875,19 +835,12 @@ function makeOverlayLyrGroups() {
             }
             // information for the dataListcontrol function
             dataListControl(e, a)
-
-            //$(".hvcount").remove()
-            //$('#download').append("<span class='hvcount'> "+hvlist.length+" selected</span>")
-
-
         }
 
         function resetHighlight(e) { // resets the the style when the tile is unselected
             ardLayer.resetStyle(e.target);
             a = 1;  // information for the dataListcontrol function
             dataListControl(e, a)
-            //$(".hvcount").remove()
-            //$('#download').append("<span class='hvcount'> "+hvlist.length+" selected</span>")
         }
 
 
@@ -917,16 +870,8 @@ function makeOverlayLyrGroups() {
         }
 
         function onEachFeature(feature, layer) {
-            //layer.bindTooltip(feature.properties.name, {permanent: true, direction: 'center'})//.openTooltip();
-            //layer.bindPopup('<pre>'+JSON.stringify(feature.properties,null,' ').replace(/[\{\}"]/g,'')+'</pre>');
-            //     //layer.bindPopup(label);
 
             layer['label'] = '<pre>' + JSON.stringify(feature.properties.ARD_tile, null, ' ').replace(/[\{\}"]/g, '') + '</pre>';
-
-            //layer.on({mouseover: highlightFeature});//high ligths layer when mouse is over it
-
-            //layer.on({mouseout: resetHighlight});
-
 
             layer.on({dblclick: markFeature});
 
