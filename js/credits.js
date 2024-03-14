@@ -41,7 +41,7 @@ var creds = {
 	},
 	"People": {
 		"Project Director": "Robert Kennedy",
-		"Developers": "Justin Braaten, Joe Hughes, Peter Clary, Alan Devenish, Dan Stephen"
+		"Developers": "Peter Clary, Justin Braaten"
 	}
 };
 

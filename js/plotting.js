@@ -1,5 +1,5 @@
 // add a click event listener to each of the maps for when a time series should be plotted
-$(document).ready(function() {
+/*$(document).ready(function() {
 	//$('#click').click(function(){
 	//map.on('click', function(e){plotMultiTimeSeriesData({'lon':e.latlng.lng, 'lat':e.latlng.lat})})
 	map.on('click', function (e) {
@@ -140,7 +140,7 @@ var nlcdDisplay = {
 		label: 'Emergent Herbaceous Wetlands'
 	}
 }
-
+*/
 // function to fire up the data dir on the server on page load, so the user does not have to wait so long for first load
 function wakeData(){
 	console.log('waking up data')
@@ -191,8 +191,13 @@ function plotPixelTimeSeries(e) {
 		coords,
 		function(data, status) {
 			$("#spinner").toggle("fast", function() {});
-
-			var data = JSON.parse(data);
+                        console.log(data)
+                        console.log(status)
+                        try{
+			    var data = JSON.parse(data);
+                        }catch (error){
+                            console.error("error:",error)
+                        }
 			// defaults to continuous plot characteristics
 			var plotType = 'lines' // lines+markers
 			var markerSize = '8'

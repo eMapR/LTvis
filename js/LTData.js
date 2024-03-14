@@ -247,7 +247,7 @@ var dataSets = {
         "dType": "categorical",
         "scalar": null,
         "yAxisLab": "Bugnet likelihood Class",
-        "tmsURL": "http://192.168.1.45/LTvis/tms/imgs",
+        "tmsURL": "http://192.168.1.45/LTvis/RGB",
         "metaDataURL": "http://emapr.ceoas.oregonstate.edu/metadata.html",
         "id": "renoster",
         "dataPath": "/data/maps/bugnet_R6/option2/annual/bugnet_option2_v1.vrt",

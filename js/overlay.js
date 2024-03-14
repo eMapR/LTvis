@@ -3,19 +3,13 @@
  */
 
 // this opens the map guide overlay
-//$(document).click(function on() {
-    $("#guide").click(function () {
-        document.getElementById("mapGuide").style.display = "block";
-    })
-//});
-//end
+$("#guide").click(function () {
+    document.getElementById("mapGuide").style.display = "block";
+})
 // this open the credits overlay
-//$(document).click(function on() {
-    $("#credits").click(function () {
-        document.getElementById("mapCredits").style.display = "block";
-    })
-//});
-//end
+$("#credits").click(function () {
+    document.getElementById("mapCredits").style.display = "block";
+})
 // this area below allows you close the overlay
 function off() {
     document.getElementById("mapGuide").style.display = "none";
@@ -26,7 +20,7 @@ $(document).click(function on() {
         document.getElementById("mapCredits").style.display = "none";
     })
 });
-//end
+
 // Here is the accordion stuff
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -51,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 });
-//end
+
 //this is how we populate the accordion
 for (var x in creds) {
 	mainUlId = Math.random().toString(36).substring(7);	
